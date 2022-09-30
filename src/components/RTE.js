@@ -15,9 +15,15 @@ import { createElement } from "@syncfusion/ej2-base";
 import * as CodeMirror from "codemirror";
 import { useEffect, useState } from "react";
 
-export const RTE = () => {
+export const RTE = ({ getData }) => {
   const [rteObj, setRteObj] = useState();
   const [getVal, setGetVal] = useState();
+
+  useEffect(() => {
+
+
+  }, [])
+
 
   const hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
   // Rich Text Editor items list
@@ -206,13 +212,15 @@ export const RTE = () => {
     console.log("save", rteObj.value);
     const formData = new FormData();
     formData.append("about", rteObj.value);
-    fetch("http://localhost/thorient/information/about/edit-about", {
-      method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      body: formData,
-    }).then((res) => {
-      console.log("Request complete! response:", res);
-    });
+
+    getData(formData)
+    // fetch("https://mukhicorporation.com/thorient/information/about/edit-about", {
+    //   method: "POST",
+    //   //   headers: { "Content-Type": "application/json" },
+    //   body: formData,
+    // }).then((res) => {
+    //   console.log("Request complete! response:", res);
+    // });
   };
   return (
     <div className='control-pane'>
@@ -222,7 +230,10 @@ export const RTE = () => {
             insertImageSettings={insertImageSetting}
             id='toolsRTE'
             ref={(richtexteditor) => {
-              setRteObj(richtexteditor);
+              if (richtexteditor) {
+                richtexteditor.insertImageSettings.saveFormat = "Base64"
+                setRteObj(richtexteditor);
+              }
             }}
             showCharCount={true}
             actionBegin={handleFullScreen}
@@ -256,6 +267,6 @@ export const RTE = () => {
           Save
         </button>
       </div>
-    </div>
+    </div >
   );
 };

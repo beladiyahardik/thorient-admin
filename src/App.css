@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,28 +9,28 @@
     letter-spacing: 3px;
 }
 
-#js-licensing{
+#js-licensing {
     display: none;
 }
 
-body{
+body {
     background-color: #e4eaec;
 }
 
-.layout{
+.layout {
     display: grid;
     grid-template-columns: 255px auto;
 }
 
-.layout-child{
+.layout-child {
     padding: 15px;
     margin: 10px;
 }
 
-.sidebar{
+/* .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: #1B26A8;
+    background-color: #001D6E;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     padding: 20px;
@@ -38,18 +38,96 @@ body{
     border-radius: 0px 15px 15px 0px;
 }
 
-.sidebar ul li{
+.sidebar ul li {
     list-style: none;
 }
 
-.link{
+.link {
     color: white;
     text-decoration: none;
+    width: 200px !important;
 }
 
-.sidebar ul{
+.sidebar ul {
     height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+} */
+
+
+.sidebar {
+    background-color: #001D6E;
+    width: 250px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height: 100vh;
+    color: white;
+    border-radius: 0px 15px 15px 0px;
 }
+
+/* .sidebar img {
+    margin-bottom: 40px;
+} */
+
+.sidebar-links {
+    margin: 0px 20px;
+    border-top: 1px solid #ededed;
+    min-height: 80vh;
+}
+
+/* .sidebar-links button img {
+    margin-right: 14px;
+    margin-bottom: 0px;
+} */
+
+.sidebar-links .disabel {
+    margin-top: 15px;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    text-align: start;
+    padding: 17.5px;
+    border-radius: 10px;
+    /* font-family: Roboto; */
+    /* font-style: normal;
+    font-weight: normal; */
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-decoration: none !important;
+    letter-spacing: 0;
+}
+
+.sidebar-links .active {
+    background-color: #FFF !important;
+    text-decoration: none !important;
+    color: #001D6E;
+    font-weight: bold;
+}
+
+.sidebar-links .disabel.btn-primary:hover {
+    color: #000000 !important;
+}
+
+.sidebar-links .active.btn-primary:hover {
+    color: #ffffff !important;
+}
+
+.sidebar-links a {
+    text-decoration: none;
+}
+
+/* .sidebar-close-btn {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 200px;
+    top: 20px;
+}
+
+.sidebar-close-btn img {
+    width: 100%;
+    height: 100%;
+} */

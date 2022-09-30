@@ -1,43 +1,46 @@
+import { Button, Navbar } from "@nextui-org/react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
+
+  const sidebarData = [
+    {
+      title: "Dashboard",
+      path: "/dashboard"
+    },
+    {
+      title: "About",
+      path: "/about"
+    },
+    {
+      title: "Contact",
+      path: "/contact"
+    },
+    {
+      title: "Privacy Policy",
+      path: "/privacy"
+    },
+  ]
+
+  const location = useLocation()
+
   return (
-    <div className='sidebar'>
-      <ul>
-        <li>
-          <Link to='/dashboard' className='link'>
-            Dashboard
-          </Link>
-        </li>
-        <li>
-          <Link to='/category' className='link'>
-            Category
-          </Link>
-        </li>
-        <li>
-          <Link to='/sub-category' className='link'>
-            Sub Category
-          </Link>
-        </li>
-        <li>Stories</li>
-        <li>Wallpapers</li>
-        <li>
-          <Link to='/about' className='link'>
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to='/contact' className='link'>
-            Contact
-          </Link>
-        </li>
-        <li>
-          <Link to='/privacy' className='link'>
-            Privacy Policy
-          </Link>
-        </li>
-      </ul>
+
+    <div className="sidebar">
+      {/* <img src={sidebarLogo} alt="" /> */}
+      <div className='sidebar-links'>
+        {
+          sidebarData.map((item, i) => (
+            <Link to={item.path}>
+              <button className={` ${location.pathname.includes(item.path) && 'active'} disabel `} onClick={() => { }} > {item.title}</button>
+            </Link>
+          ))
+        }
+      </div>
+      <footer className='copyright' >
+        <p>Copyrights 2022 <span>Thorient</span> <br /> All Rights Reserved.</p>
+      </footer>
     </div>
   );
 };
