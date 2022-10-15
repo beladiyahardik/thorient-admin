@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Layout = ({ children }) => {
 

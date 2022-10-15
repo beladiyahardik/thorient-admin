@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "../layout";
 import About from "./About/About";
+import Blog from "./Blog";
 import Contact from "./Contact/Contact";
 import Dashboard from "./Dashboard";
 import Home from "./Home";
@@ -16,6 +17,7 @@ const Index = () => {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/privacy' element={<Privacy />} />
+        <Route path='/blog' element={<Blog />} />
       </Routes>
     </Layout>
   );

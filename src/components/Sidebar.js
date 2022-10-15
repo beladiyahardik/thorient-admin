@@ -21,6 +21,10 @@ const Sidebar = () => {
       title: "Privacy Policy",
       path: "/privacy"
     },
+    {
+      title: "Blog",
+      path: "/blog"
+    },
   ]
 
   const location = useLocation()

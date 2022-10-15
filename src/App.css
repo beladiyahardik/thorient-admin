@@ -27,34 +27,6 @@ body {
     margin: 10px;
 }
 
-/* .sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #001D6E;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    padding: 20px;
-    color: white;
-    border-radius: 0px 15px 15px 0px;
-}
-
-.sidebar ul li {
-    list-style: none;
-}
-
-.link {
-    color: white;
-    text-decoration: none;
-    width: 200px !important;
-}
-
-.sidebar ul {
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-} */
-
 
 .sidebar {
     background-color: #001D6E;
@@ -66,20 +38,10 @@ body {
     border-radius: 0px 15px 15px 0px;
 }
 
-/* .sidebar img {
-    margin-bottom: 40px;
-} */
-
 .sidebar-links {
     margin: 0px 20px;
-    border-top: 1px solid #ededed;
     min-height: 80vh;
 }
-
-/* .sidebar-links button img {
-    margin-right: 14px;
-    margin-bottom: 0px;
-} */
 
 .sidebar-links .disabel {
     margin-top: 15px;
@@ -90,9 +52,6 @@ body {
     text-align: start;
     padding: 17.5px;
     border-radius: 10px;
-    /* font-family: Roboto; */
-    /* font-style: normal;
-    font-weight: normal; */
     font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
@@ -119,15 +78,18 @@ body {
     text-decoration: none;
 }
 
-/* .sidebar-close-btn {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    left: 200px;
-    top: 20px;
+.nextui-c-hWZRae-bzEnZV-borderWeight-normal {
+    width: 100%;
 }
 
-.sidebar-close-btn img {
+.blogTitle {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
     width: 100%;
-    height: 100%;
-} */
+    background-color: #e4eaec;
+}
+
+.blogTitle:focus-visible{
+    border: none;
+}
